@@ -17,8 +17,10 @@ export default class LocalClient {
     this.pd_url = urls.pd_url;
     this.glz_url = urls.glz_url;
     this.version = urls.version;
+    process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = '0';
     this.liveClient = new Live();
     this.agent = agent;
+    // dont verify ssl
 
   }
 
