@@ -1,7 +1,5 @@
-# ValClient.js
-
 <div align = "center">
-  <img src = "/docs/logo.png"></img>
+  <img src = "./docs/logo.png"></img>
  </div>
 
 ValClient currently, does _not_ implement the official riotgames VALORANT api. We recommend using one of the many other libraries out there if that is what you want
@@ -23,9 +21,11 @@ npm i valclient
 > Make sure that you're using module js
 
 ``` typescript
-import Client from "valclient";
+import Client, { LocalAgent } from "valclient";
 
-const client = new Client();
+const agent = new LocalAgent(); // start the connection with the local api
+
+const client = new Client(agent);
 const liveClient = client.liveClient;
 const gameChat = liveClient.gameChat;
 

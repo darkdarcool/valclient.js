@@ -30,27 +30,12 @@ export default class Live {
     });
     return await data.json() as Promise<LocalSession>;
   }
-  /**
-   * NOT MEANT FOR DEVELOPER USE. 
-   * @deprecated
-   * @returns Entitlements
+  /** 
+   * Returns the game chat class
+   * @returns GameChat
    */
-  async _getTokens_DO_NOT_USE(): Promise<Entitlements> {
-    let data = await fetch(`${this.url}/entitlements/v1/token`, {
-      headers: {
-        "Authorization": this.auth,
-      },
-      //agent: httpsAgent
-    });
-    let json = await data.json();
-    let entitlements: Entitlements = {
-      token: json['token'],
-      accessToken: json['accessToken'],
-    }
-    return entitlements;
-  }
-
-  get gameChat() {
+  get gameChat(): GameChat {
     return new GameChat(this.url, this.auth);
   }
+
 }

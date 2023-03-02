@@ -41,4 +41,5 @@ export default class GameChat {
     });
     return (await data.json())['messages'][0] as Promise<SendMessageResponse>; // there is only one message in the response in all scenarios, so we can just return that.
   }
+
 }
