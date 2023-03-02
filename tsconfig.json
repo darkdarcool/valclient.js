@@ -12,5 +12,5 @@
     }
     
   },
-  "files": ["./src/mod.ts"]
+  "files": ["./src/mod.ts"],
 }

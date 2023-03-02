@@ -40,8 +40,7 @@ gameChat.sendMessage(cid, "Hello! This message is sent by a script to your game!
 
 ## Documentation
 
-not yet lol give me some time and motivation
-
+See the /docs directory
 ## Authors
 
 * [darkdarcool](https://github.com/darkdarcool)
